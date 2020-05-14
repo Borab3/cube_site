@@ -59,7 +59,9 @@
       var hemi = new BABYLON.HemisphericLight("toto");
 
       var boxMaterial = new BABYLON.StandardMaterial();
-      boxMaterial.diffuseColor = new BABYLON.Color3(0.608, 0.302, 0.792);
+      //boxMaterial.diffuseColor = new BABYLON.Color3(0.608, 0.302, 0.792);
+      boxMaterial.reflectionTexture = new BABYLON.CubeTexture("https://raw.githubusercontent.com/Borab3/cube_website/master/sample/sample/textures/TropicalSunnyDay", scene);
+      boxMaterial.disableLighting = true;
 
       //Creation
       var box = BABYLON.Mesh.CreateBox("box", 55, scene);
@@ -74,21 +76,21 @@
 
     var manager = new BABYLON.GUI.GUI3DManager(scene);
 
-    // Let's add a button
-    var button = new BABYLON.GUI.Button3D("reset");
-    manager.addControl(button);
-    button.linkToTransformNode(anchor);
-    button.position.z = -27.7;
-
-    button.onPointerUpObservable.add(function(){
-        window.open("https://www.google.com/");
-    });
-
-    var text1 = new BABYLON.GUI.TextBlock();
-    text1.text = "google.com";
-    text1.color = "white";
-    text1.fontSize = 24;
-    button.content = text1;
+    // // Let's add a button
+    // var button = new BABYLON.GUI.Button3D("reset");
+    // manager.addControl(button);
+    // button.linkToTransformNode(anchor);
+    // button.position.z = -27.7;
+    //
+    // button.onPointerUpObservable.add(function(){
+    //     window.open("https://www.google.com/");
+    // });
+    //
+    // var text1 = new BABYLON.GUI.TextBlock();
+    // text1.text = "google.com";
+    // text1.color = "white";
+    // text1.fontSize = 24;
+    // button.content = text1;
 
 
       return scene;
