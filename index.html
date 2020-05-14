@@ -57,7 +57,7 @@
       var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 2, 1.25, 110, BABYLON.Vector3.Zero(), scene);
       camera.attachControl(canvas, true);
 
-      var light=new BABYLON.HemisphericLight("hemi",new BABYLON.Vector3(0.5,0.5,0.5),scene);
+      var light=new BABYLON.HemisphericLight("hemi",new BABYLON.Vector3(-0.5,0.5,0.5),scene);
       light.groundColor=new BABYLON.Color3(0.5,0.5,0.5);
 
       //Creation
