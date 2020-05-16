@@ -104,27 +104,111 @@
     	box.material=multi;
 
 
-
-      //boxMaterial.reflectionTexture = new BABYLON.CubeTexture("https://raw.githubusercontent.com/Borab3/cube_website/master/textures/cube-face", scene);
-
-
+      var anchor = new BABYLON.AbstractMesh("anchor", scene);
+      var manager = new BABYLON.GUI.GUI3DManager(scene);
 
 
-    // // Let's add a button
-    // var button = new BABYLON.GUI.Button3D("reset");
-    // manager.addControl(button);
-    // button.linkToTransformNode(anchor);
-    // button.position.z = -27.7;
-    //
-    // button.onPointerUpObservable.add(function(){
-    //     window.open("https://www.google.com/");
-    // });
-    //
-    // var text1 = new BABYLON.GUI.TextBlock();
-    // text1.text = "google.com";
-    // text1.color = "white";
-    // text1.fontSize = 24;
-    // button.content = text1;
+
+    // Let's add a vido_button
+    var vido_button = new BABYLON.GUI.Button3D("vido_github");
+    manager.addControl(vido_button);
+    vido_button.linkToTransformNode(anchor);
+    vido_button.position = new BABYLON.Vector3(15.5, 3.75, 30);
+    vido_button.scaling = new BABYLON.Vector3(7, 2, 1);
+    vido_button.onPointerUpObservable.add(function(){
+        window.open("https://github.com/ZackJorquera/Vido");
+    });
+    vido_button.mesh.material.alpha = .1;
+
+    var freedrop_button = new BABYLON.GUI.Button3D("freedrop_github");
+    manager.addControl(freedrop_button);
+    freedrop_button.linkToTransformNode(anchor);
+    freedrop_button.position = new BABYLON.Vector3(-15.2, 3.75, 30);
+    freedrop_button.scaling = new BABYLON.Vector3(7, 2, 1);
+    freedrop_button.onPointerUpObservable.add(function(){
+        window.open("https://github.com/Ryan-Oroke/camelCase-project");
+    });
+    freedrop_button.mesh.material.alpha = .1;
+
+    var textbook_button = new BABYLON.GUI.Button3D("textbook_github");
+    manager.addControl(textbook_button);
+    textbook_button.linkToTransformNode(anchor);
+    textbook_button.position = new BABYLON.Vector3(15.5, -25.3, 30);
+    textbook_button.scaling = new BABYLON.Vector3(7, 2, 1);
+    textbook_button.onPointerUpObservable.add(function(){
+        window.open("https://github.com/Borab3/OCRTextbook");
+    });
+    textbook_button.mesh.material.alpha = .1;
+
+    var hack5_button = new BABYLON.GUI.Button3D("hack5_github");
+    manager.addControl(hack5_button);
+    hack5_button.linkToTransformNode(anchor);
+    hack5_button.position = new BABYLON.Vector3(-15.2, -25.3, 30);
+    hack5_button.scaling = new BABYLON.Vector3(7, 2, 1);
+    hack5_button.onPointerUpObservable.add(function(){
+        window.open("https://github.com/ZackJorquera/HackCUV2019");
+    });
+    hack5_button.mesh.material.alpha = .1;
+
+    var leaf_button = new BABYLON.GUI.Button3D("leaf_github");
+    manager.addControl(leaf_button);
+    leaf_button.linkToTransformNode(anchor);
+    leaf_button.position = new BABYLON.Vector3(-30, 3.9, 15.4);
+    leaf_button.scaling = new BABYLON.Vector3(1, 2, 75);
+    leaf_button.onPointerUpObservable.add(function(){
+        window.open("https://github.com/Borab3/LeafAreaMacro2017");
+    });
+    leaf_button.mesh.material.alpha = .1;
+
+    var moire_button = new BABYLON.GUI.Button3D("moire_github");
+    manager.addControl(moire_button);
+    moire_button.linkToTransformNode(anchor);
+    moire_button.position = new BABYLON.Vector3(-30, 3.8, -15);
+    moire_button.scaling = new BABYLON.Vector3(1, 2, 75);
+    moire_button.onPointerUpObservable.add(function(){
+        window.open("https://github.com/Borab3/Morie-Pattern-Remover");
+    });
+    moire_button.mesh.material.alpha = .1;
+
+    var pips_button = new BABYLON.GUI.Button3D("pips_download");
+    manager.addControl(pips_button);
+    pips_button.linkToTransformNode(anchor);
+    pips_button.position = new BABYLON.Vector3(-30, -25, 14.5);
+    pips_button.scaling = new BABYLON.Vector3(1, 2, 125);
+    pips_button.onPointerUpObservable.add(function(){
+        window.open("https://drive.google.com/file/d/18NBHMWyrTXLwZi2_VV43HrowZQMo4nEw/view");
+    });
+    pips_button.mesh.material.alpha = .1;
+
+    var cors_button = new BABYLON.GUI.Button3D("cors_article");
+    manager.addControl(cors_button);
+    cors_button.linkToTransformNode(anchor);
+    cors_button.position = new BABYLON.Vector3(30, 3.75, -15);
+    cors_button.scaling = new BABYLON.Vector3(1, 2, 50);
+    cors_button.onPointerUpObservable.add(function(){
+        window.open("https://www.section.io/engineering-education/what-is-cors-policy/");
+    });
+    cors_button.mesh.material.alpha = .1;
+
+    var hoist_button = new BABYLON.GUI.Button3D("hoisting_article");
+    manager.addControl(hoist_button);
+    hoist_button.linkToTransformNode(anchor);
+    hoist_button.position = new BABYLON.Vector3(30, 3.75, 15);
+    hoist_button.scaling = new BABYLON.Vector3(1, 2, 50);
+    hoist_button.onPointerUpObservable.add(function(){
+        window.open("https://www.section.io/engineering-education/javascript-hoisting/");
+    });
+    hoist_button.mesh.material.alpha = .1;
+
+    var event_loop_button = new BABYLON.GUI.Button3D("event_loop_article");
+    manager.addControl(event_loop_button);
+    event_loop_button.linkToTransformNode(anchor);
+    event_loop_button.position = new BABYLON.Vector3(30, -25, -15);
+    event_loop_button.scaling = new BABYLON.Vector3(1, 2, 50);
+    event_loop_button.onPointerUpObservable.add(function(){
+        window.open("https://www.section.io/engineering-education/event-loop-explained/");
+    });
+    event_loop_button.mesh.material.alpha = .1;
 
 
       return scene;
